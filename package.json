@@ -1,0 +1,25 @@
+{
+  "name": "prf",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.3.1"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup-plugin-minify-template-literals": "^1.1.7"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lib/prf.elements.cjs.js",
+  "module": "./dist/lib/prf.elements.umd.js"
+}
