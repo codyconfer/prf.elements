@@ -1,6 +1,6 @@
 import {html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
-import {layoutStyles} from "./styles.ts";
+import {layoutStyles} from "./layout/styles.ts";
 
 
 @customElement('prf-nav')

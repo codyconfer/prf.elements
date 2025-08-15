@@ -10,12 +10,8 @@ const __elements = `${__src}/elements`
 
 export default defineConfig({
   plugins: [
-    minifyTemplateLiterals({
-      options: {
-        parseLiteralsOptions: {},
-      }
-    }),
-    terser()
+    minifyTemplateLiterals(),
+    terser({ format: { comments: false }})
   ],
   build: {
     lib: {

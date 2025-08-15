@@ -1,11 +1,20 @@
-import {html, LitElement} from 'lit'
+import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
 import {layoutStyles} from "./styles.ts";
 
 
 @customElement('prf-header')
 export class Header extends LitElement {
-  static styles = [layoutStyles]
+  static styles = [
+    layoutStyles,
+    css`
+      header .wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    `]
 
   render() {
     return html`
