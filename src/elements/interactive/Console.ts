@@ -1,23 +1,22 @@
 import {html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
-import {layoutStyles} from "./layout/styles.ts";
 
 
-@customElement('prf-nav')
-export class Nav extends LitElement {
-  static styles = [layoutStyles]
+@customElement('prf-console')
+export class Console extends LitElement {
+  static styles = []
 
   render() {
     return html`
-      <nav class="wrapper">
+      <div>
         <slot></slot>
-      </nav>
+      </div>
     `
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'prf-nav': Nav
+    'prf-console': Console
   }
 }
