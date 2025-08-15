@@ -8,6 +8,12 @@
 
 [Install Bun](https://github.com/oven-sh/bun)
 
+#### Install Dependencies
+
+```bash
+bun install
+```
+
 ### Dev
 
 ```bash
