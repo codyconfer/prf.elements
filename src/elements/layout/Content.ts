@@ -1,19 +1,17 @@
-import {css, html, LitElement} from 'lit'
-import {customElement} from 'lit/decorators.js'
-import {layoutStyles} from "./styles.ts";
+import { css, html, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
+import { layoutStyles } from "./styles.ts";
 
-
-@customElement('prf-content')
+@customElement("prf-content")
 export class Content extends LitElement {
-  static styles = [layoutStyles,
-  css`
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 1rem;
-    }
-  `]
+  static styles = [
+    layoutStyles,
+    css`
+      .content {
+        gap: 1rem;
+      }
+    `,
+  ];
 
   render() {
     return html`
@@ -22,12 +20,12 @@ export class Content extends LitElement {
           <slot></slot>
         </div>
       </main>
-    `
+    `;
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'prf-content': Content
+    "prf-content": Content;
   }
 }
