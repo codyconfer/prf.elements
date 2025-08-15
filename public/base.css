@@ -39,6 +39,7 @@ body {
   margin: 0;
 }
 
-prf-main {
+prf-content {
+  display: flex;
   flex: fit-content;
 }
