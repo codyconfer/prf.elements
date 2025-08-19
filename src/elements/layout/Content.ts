@@ -14,6 +14,7 @@ export class Content extends LitElement {
   ];
 
   render() {
+    document.getElementById('prf')?.classList.remove('hidden')
     return html`
       <main class="container">
         <div class="wrapper content">
