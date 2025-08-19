@@ -10,6 +10,6 @@ export const layoutStyles = css`
   .wrapper {
     flex: fit-content;
     max-width: 1280px;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 `;
