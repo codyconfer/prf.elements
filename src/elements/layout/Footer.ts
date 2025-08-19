@@ -14,6 +14,10 @@ export class Footer extends LitElement {
         align-items: center;
         flex-direction: row;
       }
+
+      .copyright {
+        font-size: 0.8rem;
+      }
     `]
 
   readonly year = new Date().getFullYear()
@@ -25,7 +29,7 @@ export class Footer extends LitElement {
           <div>
             <slot></slot>
           </div>
-          <div>
+          <div class="copyright">
             &copy; ${this.year}
           </div>
         </div>
