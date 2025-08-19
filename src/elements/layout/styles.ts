@@ -12,4 +12,10 @@ export const layoutStyles = css`
     max-width: 1280px;
     padding: 1.5rem;
   }
+
+  .wrapper-small {
+    flex: fit-content;
+    max-width: 1024px;
+    padding: 1.5rem;
+  }
 `;
