@@ -9,8 +9,8 @@ const __src = `${__dirname}/src`
 
 export default defineConfig({
   plugins: [
-    minifyTemplateLiterals({ exclude: 'node_modules/**' }),
-    terser({ format: { comments: false }})
+    minifyTemplateLiterals({exclude: 'node_modules/**'}),
+    terser({format: {comments: false}})
   ],
   build: {
     lib: {

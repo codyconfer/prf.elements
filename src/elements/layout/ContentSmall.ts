@@ -2,8 +2,8 @@ import {css, html, LitElement} from "lit";
 import {customElement} from "lit/decorators.js";
 import {layoutStyles} from "./styles.ts";
 
-@customElement("prf-content")
-export class Content extends LitElement {
+@customElement("prf-content-small")
+export class ContentSmall extends LitElement {
   static styles = [
     layoutStyles,
     css`
@@ -17,7 +17,7 @@ export class Content extends LitElement {
     document.getElementById('prf')?.classList.remove('hidden')
     return html`
       <main class="container">
-        <div class="wrapper content">
+        <div class="wrapper-small content">
           <slot></slot>
         </div>
       </main>
@@ -27,6 +27,6 @@ export class Content extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "prf-content": Content;
+    "prf-content-small": ContentSmall;
   }
 }
