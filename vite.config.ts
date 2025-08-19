@@ -9,20 +9,22 @@ const __src = `${__dirname}/src`
 
 export default defineConfig({
   plugins: [
-    minifyTemplateLiterals(),
+    minifyTemplateLiterals({ exclude: 'node_modules/**' }),
     terser({ format: { comments: false }})
   ],
   build: {
     lib: {
       entry: {
         'prf': `${__src}/index.ts`,
+        'prf.elements': `${__src}/elements/index.ts`,
+        'prf.events': `${__src}/events/index.ts`,
       },
       name: 'prf',
-      formats: ['cjs', 'iife', 'umd', 'es'],
+      formats: ['cjs', 'es'],
       fileName: (format) => {
         switch (format) {
           case 'es':
-            return 'prf.elements.js'
+            return 'lib/prf.elements.js'
           case 'iife':
           case 'cjs':
           case 'umd':
